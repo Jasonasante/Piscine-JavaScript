@@ -1,4 +1,4 @@
-function isPostive(num){
+function isPositive(num){
     return num>0;
 }
 
