@@ -20,4 +20,3 @@ if (planetName==='earth'){
     return null
 }
 }
-console.log(dogYears('earth',1000000000))
