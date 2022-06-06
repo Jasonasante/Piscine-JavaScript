@@ -1,5 +1,8 @@
 function concatStr(str1, str2){
-    let newStr=str1+" "+str2;
-    return newStr
+    if (typeof str1,str2 === 'string') {
+        let newStr=str1+" "+str2;
+        return newStr
+    } else {
+        return null
+    }
 }
-console.log(concatStr(1,2))
