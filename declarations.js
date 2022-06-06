@@ -14,10 +14,12 @@ Object.freeze(obj);
 
 const nested= {
     arr1: [4, undefined, '2'],
-    obj:{
+    obj1:{
         str : "My name is Joseph",
         num : 2,
         bool : false
     }
 };
 Object.freeze(nested);
+Object.freeze(nested.arr1);
+Object.freeze(nested.obj1);
