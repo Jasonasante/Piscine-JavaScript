@@ -7,5 +7,6 @@ function last (array){
 }
 
 function kiss (array){
-    return [array[(array.length)-1], array[0]];
+    let array1= [last(array),first(array)];
+    return array1;
 }
