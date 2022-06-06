@@ -10,4 +10,3 @@ if (num<0){
     return num;
 }
 }
-console.log(abs(-3))
