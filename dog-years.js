@@ -1,7 +1,7 @@
 function dogYears(planetName,dogAge){
     const sec=31557600
 if (planetName==='earth'){
-    return (dogAge/sec).toFixed(2);
+    return ((dogAge*7)/sec).toFixed(2);
 }else if (planetName==='mercury'){
     return ((dogAge*0.2408467*7)/sec).toFixed(2);
 }else if (planetName==='venus'){
@@ -20,3 +20,4 @@ if (planetName==='earth'){
     return null
 }
 }
+console.log(dogYears('earth',1000000000))
