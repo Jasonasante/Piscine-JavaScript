@@ -34,8 +34,8 @@ function cutFirstLast(string){
 }
 
 function keepFirst(str){
-    if (string.length<=1){
-        return string;
+    if (str.length<=1){
+        return str;
     }else{
         let newStr="";
         for (let i=0;i<=1;i++){
@@ -61,9 +61,10 @@ function keepFirstLast(string){
     if (string.length<=4){
         return string;
     }else{
-        let newStr="";
-        newStr=keepFirst(string);
-        newStr=keepLast(newStr);
-        return newStr;
+        let firstStr="";
+        let lastStr="";
+        firstStr=keepFirst(string);
+        lastStr=keepLast(string);
+        return firstStr+lastStr;
     }
 }
