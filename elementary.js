@@ -4,7 +4,7 @@ function multiply(number,multiplier){
     }else if (multiplier<0){
         let num=-number;
         let result=0;
-        for ( leti=0;i>multiplier;i--){
+        for ( let i=0;i>multiplier;i--){
             result+=num;
         }
         return result;
