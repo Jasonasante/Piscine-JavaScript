@@ -29,7 +29,7 @@ function divide (divided,divisor){
             divided -= divisor;
             ++result;
         }
-        return result*-1;
+        return -result;
     }else{
         let result =0;
         divided=Math.abs(divided);
