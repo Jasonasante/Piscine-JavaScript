@@ -18,17 +18,12 @@ function round(number,divisor){
 }
 
 function ceil(number){
-    let num=0;
-    let mod=0;
-    let result=0;
-    num=number/1;
-    mod=number%1;
-    let sub=mod/1;
-    if (mod/1>0){
-        result=num+(1-sub);
+    let mod=number%1;
+    if (mod>0){
+       let result=number+(1-mod);
         return result;
     }else{
-        result=num-sub;
+        let result=number-mod;
         return result;
     }
 }
