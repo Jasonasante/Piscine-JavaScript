@@ -12,6 +12,12 @@ function slice (collection,start,end){
             start =collection.length+start;
         }
 
+        if (end<0 && -end>collection.length){
+            end=0;
+        }else if (end<0 && -end<collection.length){
+            end =collection.length+end;
+        }
+
         if(Array.isArray(collection)){
             let tempArray =[];
             for (let i=start;i<end;i++){
