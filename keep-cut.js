@@ -1,6 +1,6 @@
 function cutFirst(str){
     if (str.length<=1){
-        return str;
+        return "";
     }else{
         let newStr=""
         for (let i=2;i<str.length;i++){
@@ -12,7 +12,7 @@ function cutFirst(str){
 
 function cutLast(str){
     if (str.length<=1){
-        return str;
+        return "";
     }else{
         let newStr="";
         for (let i=0;i<(str.length-2);i++){
