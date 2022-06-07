@@ -1,22 +1,23 @@
-function multiply(divided,divisor){
-    if (divisor==0){
+function multiply(number,multiplier){
+    if (multiplier==0){
         return 0
-    }else if (divisor<0){
-        let num=-divided;
+    }else if (multiplier<0){
+        let num=-number;
         let result=0;
-        for (i=0;i>divisor;i--){
+        for ( leti=0;i>multiplier;i--){
             result+=num;
         }
         return result;
     }else{
-        let num=divided;
+        let num=number;
         let result=0;
-        for (i=0;i<divisor;i++){
+        for( let i=0;i<multiplier;i++){
             result+=num;
         }
         return result;
     }
 }
+console.log(multiply(34,78))
 
 function divide (divided,divisor){
     if (divisor==0){
