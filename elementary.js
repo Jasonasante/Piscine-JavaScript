@@ -1,5 +1,5 @@
 function multiply(number,multiplier){
-    if (multiplier==0){
+    if (multiplier==0||number==0){
         return 0
     }else if (multiplier<0){
         let num=-number;
