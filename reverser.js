@@ -1,5 +1,5 @@
 function reverse(collection){
-    if (typeof collection===[]){
+    if (Array.isArray(collection)){
         let tempArray=[];
         for(let i=collection.length-1;i>=0;i--){
         tempArray.push(collection[i]);
@@ -15,3 +15,4 @@ function reverse(collection){
         return collection;
     }
 }
+console.log(reverse([1, 2, 3]))
