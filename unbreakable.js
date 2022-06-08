@@ -48,4 +48,14 @@ function split(str, splitter) {
     }
     return tempArray;
 }
-  
+
+function join(arr, char) {
+    let str = "";
+    for (let i = 0; i < arr.length; i++) {
+      str += arr[i];
+      if (i !== arr.length - 1) {
+        str += char;
+      }
+    }
+    return str;
+}
