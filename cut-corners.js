@@ -22,7 +22,7 @@ function modulo(num1, num2) {
 
 function round(number,divisor){
     if (divisor==0||divisor==undefined){
-        divisor=1
+        return number;
     }
     let num=0;
     let mod=0;
