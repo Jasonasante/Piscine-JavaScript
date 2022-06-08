@@ -21,7 +21,7 @@ function modulo(num1, num2) {
 }
 
 function round(number){
-if (number>0){
+if (number>=0){
      let num=trunc(number);
       let mod=number-num;
       if (mod>=0.5){
@@ -31,7 +31,7 @@ if (number>0){
          let result=number-mod;
           return result;
       }
-    }else if (number<0){
+    }else{
       let num=trunc(number);
       let mod=number-num;
       if (mod<=-0.5){
@@ -41,12 +41,13 @@ if (number>0){
          let result=number-mod;
          return result;
     	}
-    }else{
-    return 0;
-	}
+    }
 }
 
 function ceil(number){
+    if (Number.isInteger(number)){
+			return number;
+		}
     let mod=modulo(number,1);
     if (mod>0){
        let result=number+(1-mod);
@@ -61,9 +62,6 @@ function floor(number){
     if (number==0){
     	return 0;
     }
-    if (Number.isInteger(number)){
-			return number;
-		}
     let mod=modulo(number,1);
     if (mod>0){
         let result=number-(mod);
