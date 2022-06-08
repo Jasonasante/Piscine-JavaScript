@@ -8,11 +8,10 @@ function reverse(collection){
     }else if (typeof collection==="string"){
         let tempStr="";
         for(let i=collection.length-1;i>=0;i--){
-            temp+=collection[i];
+            tempStr+=collection[i];
         }
         return tempStr;
     }else{
         return collection;
     }
 }
-console.log(reverse([1, 2, 3]))
