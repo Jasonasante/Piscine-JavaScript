@@ -78,7 +78,14 @@ function trunc(number){
   if (number==Number.POSITIVE_INFINITY||number==Number.NEGATIVE_INFINITY||Number.isInteger(number)){
   return number;
 	}
-let remainder=modulo(number,1);
+  
+  if (number>=0xfffffffff){
+  let newNum=number-0xfffffffff;
+  let remainder=modulo(newNum,1);
+let result=0xfffffffff+remainder;
+return result;
+  }else{
+  let remainder=modulo(number,1);
 return number-remainder;
+  }
 }
-
