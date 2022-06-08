@@ -10,7 +10,7 @@ function split(str, splitter) {
       }
       return tempArray;
     }
-    if (splitter == undefined) {
+    if (splitter == undefined||str=='') {
       tempArray.push(str);
       return tempArray;
     }
@@ -27,7 +27,6 @@ function split(str, splitter) {
           tempStr = "";
           checkStr = "";
           i = i + (splitter.length - 1);
-          console.log(i)
           if (i >= str.length - 1) {
             tempArray.push(tempStr);
             return tempArray;
@@ -39,9 +38,7 @@ function split(str, splitter) {
           tempArray.push('')
           return tempArray;
         } else {
-          console.log("check")
           tempStr += str[i];
-          console.log(tempStr);
           tempArray.push(tempStr);
           tempStr = "";
         }
