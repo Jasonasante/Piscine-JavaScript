@@ -21,8 +21,8 @@ function modulo(num1, num2) {
   }
 
 function round(number,divisor){
-    if (divisor==0){
-        return null;
+    if (divisor==0||divisor==undefined){
+        divisor=1
     }
     let num=0;
     let mod=0;
