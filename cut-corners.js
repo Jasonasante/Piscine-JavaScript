@@ -20,23 +20,30 @@ function modulo(num1, num2) {
     return sign * counter;
   }
 
-function round(number,divisor){
-    if (divisor==0||divisor==undefined){
-        return number;
-    }
-    let num=0;
-    let mod=0;
-    let result=0;
-    num=number/divisor;
-    mod=modulo(number,divisor);
-    let sub=mod/divisor;
-    if (mod/divisor>=0.5){
-        result=num+(1-sub);
-        return result;
+function round(number){
+if (number>0){
+     let num=trunc(number);
+      let mod=number-num;
+      if (mod>=0.5){
+         let result=number+(1-mod);
+          return result;
+      }else{
+         let result=number-mod;
+          return result;
+      }
+    }else if (number<0){
+      let num=trunc(number);
+      let mod=number-num;
+      if (mod<=-0.5){
+         let result=number-(1+mod);
+          return result;
+      }else{
+         let result=number-mod;
+         return result;
+    	}
     }else{
-        result=num-sub;
-        return result;
-    }
+    return 0;
+	}
 }
 
 function ceil(number){
@@ -54,6 +61,9 @@ function floor(number){
     if (number==0){
     return 0;
     }
+    if (Number.isInteger(number)){
+return number
+}
     let mod=modulo(number,1);
     if (mod>0){
         let result=number-(mod);
@@ -67,9 +77,9 @@ function floor(number){
 }
 
 function trunc(number){
-    if (number<0){
-        return floor(number)+1;
-    }else{
-        return floor(number);
+    if (Number.isInteger(number)){
+    return number;
     }
+    let remainder=modulo(number,1);
+    return number-remainder;
 }
