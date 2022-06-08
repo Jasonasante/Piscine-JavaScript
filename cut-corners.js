@@ -81,4 +81,3 @@ function trunc(number){
 let remainder=modulo(number,1);
 return number-remainder;
 }
-
