@@ -75,17 +75,17 @@ function floor(number){
 }
 
 function trunc(number){
-  if (number==Number.POSITIVE_INFINITY||number==Number.NEGATIVE_INFINITY||Number.isInteger(number)){
-  return number;
-	}
-  
-  if (number>=0xfffffffff){
-  let newNum=number-0xfffffffff;
-  let remainder=modulo(newNum,1);
-let result=0xfffffffff+remainder;
-return result;
-  }else{
-  let remainder=modulo(number,1);
-return number-remainder;
-  }
+    if (number==Number.POSITIVE_INFINITY||number==Number.NEGATIVE_INFINITY||Number.isInteger(number)){
+    return number;
+      }
+    if (number>=0xfffffffff){
+    let newNum=number-0xfffffffff;
+    let remainder=modulo(newNum,1);
+    let newNum2=newNum-remainder;
+  let result=0xfffffffff+newNum2;
+  return result;
+    }else{
+    let remainder=modulo(number,1);
+  return number-remainder;
+    }
 }
