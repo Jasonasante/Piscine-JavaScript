@@ -18,7 +18,7 @@ function modulo(num1, num2) {
       counter = counter - divisor;
     }
     return sign * counter;
-  }
+}
 
 function round(number){
 if (number>0){
@@ -59,11 +59,11 @@ function ceil(number){
 
 function floor(number){
     if (number==0){
-    return 0;
+    	return 0;
     }
     if (Number.isInteger(number)){
-return number
-}
+			return number;
+		}
     let mod=modulo(number,1);
     if (mod>0){
         let result=number-(mod);
@@ -77,9 +77,9 @@ return number
 }
 
 function trunc(number){
-    if (Number.isInteger(number)){
-    return number;
-    }
-    let remainder=modulo(number,1);
-    return number-remainder;
+if (Number.isInteger(number)){
+return number
+}
+let remainder=modulo(number,1);
+return number-remainder;
 }
