@@ -1,10 +1,4 @@
 function modulo(num1, num2) {
-    if (num1==Number.POSITIVE_INFINITY||num1==Number.NEGATIVE_INFINITY||Number.isInteger(num1)){
-        return num1;
-    }
-    if (num2==Number.POSITIVE_INFINITY||num2==Number.NEGATIVE_INFINITY||Number.isInteger(num2)){
-        return num2;
-    }
     var sign = num1 < 0 ? -1 : 1;
     var dividend = Math.abs(num1);
     var divisor = Math.abs(num2);
