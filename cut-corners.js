@@ -83,6 +83,3 @@ function trunc(number){
 let remainder=modulo(number,1);
 return number-remainder;
 }
-let nums=[3,3.2, 3, -3, 0]
-console.log(nums.map(round))
-console.log(trunc(Number.NEGATIVE_INFINITY))
