@@ -51,12 +51,12 @@ function ceil(number){
   return number;
 	}
     let mod=modulo(number,1);
-    if (mod>0){
+    if (mod>=0){
        let result=number+(1-mod);
         return result;
     }else{
-        let result=number-mod;
-        return result;
+       let result=number-mod;
+       return result;
     }
 }
 
@@ -65,14 +65,12 @@ function floor(number){
   return number;
 	}
     let mod=modulo(number,1);
-    if (mod>0){
+    if (mod>=0){
         let result=number-(mod);
         return result;
-    }else if (mod<0){
-       let result=number+(-1-mod);
-        return result;
     }else{
-     return number;
+       let result=number+(-1-mod);
+       return result;
     }
 }
 
@@ -83,3 +81,4 @@ function trunc(number){
 let remainder=modulo(number,1);
 return number-remainder;
 }
+
