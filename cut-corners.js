@@ -1,3 +1,25 @@
+function modulo(num1, num2) {
+    var sign = num1 < 0 ? -1 : 1;
+    var dividend = Math.abs(num1);
+    var divisor = Math.abs(num2);
+  
+    if (dividend === 0) {
+      return 0;
+    }
+    if (dividend === 0 || isNaN(dividend) || isNaN(divisor)) {
+      return NaN;
+    }
+    if (dividend < divisor) {
+      return sign * dividend;
+    }
+    
+    var counter = dividend;
+    while (counter >= divisor) {
+      counter = counter - divisor;
+    }
+    return sign * counter;
+  }
+
 function round(number,divisor){
     if (divisor==0){
         return null;
@@ -6,7 +28,7 @@ function round(number,divisor){
     let mod=0;
     let result=0;
     num=number/divisor;
-    mod=number%divisor;
+    mod=modulo(number,divisor);
     let sub=mod/divisor;
     if (mod/divisor>=0.5){
         result=num+(1-sub);
@@ -18,7 +40,7 @@ function round(number,divisor){
 }
 
 function ceil(number){
-    let mod=number%1;
+    let mod=modulo(number,1);
     if (mod>0){
        let result=number+(1-mod);
         return result;
@@ -32,7 +54,7 @@ function floor(number){
     if (number==0){
     return 0;
     }
-    let mod=number%1;
+    let mod=modulo(number,1);
     if (mod>0){
         let result=number-(mod);
         return result;
