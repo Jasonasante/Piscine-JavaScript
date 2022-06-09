@@ -4,11 +4,11 @@ function pyramid(strg, length) {
       if (i < length) {
         let str = ' '.repeat(length - i);
         let str2 = strg.repeat(i * 2 - 1)
-        result += str + str2 + str + '\n';
+        result += str + str2+ '\n';
       } else {
         let str = ' '.repeat(length - i);
         let str2 = strg.repeat(i * 2 - 1)
-        result += str + str2 + str;
+        result += str + str2;
       }
     }
     return result;
