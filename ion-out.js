@@ -1,3 +1,3 @@
 function ionOut(str){
-    return str.match(/([a-z]+t)(?=ion)/gi || []);
+    return str.match(/([a-z]+t)(?=ion)/gi)||[];
   }
