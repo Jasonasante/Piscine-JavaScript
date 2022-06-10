@@ -1,4 +1,7 @@
 function letterSpaceNumber(str){
     let found=str.match(/. \d((?=\W)|$)/g);
-    return found;
+    if (found!==null){
+    	return found;
+    }
+    return [];
 }
