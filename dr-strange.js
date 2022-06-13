@@ -10,7 +10,7 @@ const weekday={
 
 function getWeekDays(){
     var weekDays = [];
-    for(i = 0; i < 14; i++)
+    for(let i = 0; i < 14; i++)
     if (i<7){  
         weekDays.push(weekday[i])
     }else{
