@@ -30,5 +30,6 @@ function addWeek(date){
 }
 
 function timeTravel({date,hour,minute,second}){
-    return date.setHours(hour,minute,second)
+    date.setHours(hour,minute,second)
+    return date
 }
