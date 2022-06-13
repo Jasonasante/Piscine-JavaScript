@@ -1,7 +1,6 @@
 function isValid(date) {
-    let d= new Date(date)
-    return d.getTime() === d.getTime()||d>0
-    }
+    return (date === 'Invalid Date' && !isNaN(date) && date !== '')
+}
   
 function isAfter(date1,date2){
     return date1>date2
