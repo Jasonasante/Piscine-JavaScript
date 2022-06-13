@@ -1,5 +1,6 @@
 function isValid(date) {
-    return date>0 && date!==null
+    let d= new Date(date)
+    return d.getTime() === d.getTime()||d>0
     }
   
 function isAfter(date1,date2){
