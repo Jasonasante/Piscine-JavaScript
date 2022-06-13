@@ -1,6 +1,10 @@
 function isValid(date) {
-    return date instanceof Date && !isNaN(date)
-  }
+    if (date===null||date===undefined){
+        return false
+    }
+    let d1=new Date(date)
+    return d1 instanceof Date && !isNaN(d1.valueOf());
+}
   
 function isAfter(date1,date2){
     return date1>date2
