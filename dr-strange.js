@@ -23,7 +23,7 @@ const start=new Date('0001-01-01')
 const sec=86400000
 
 function addWeek(date){
-    date1 = new Date(date)
+    let date1 = new Date(date)
     let diff=date1-start
     let divide=(diff/sec)%14
     return weekDays[divide]
