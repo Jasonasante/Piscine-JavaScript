@@ -7,11 +7,11 @@ function matchCron(str,date){
     for (let i=0;i<slice.length;i++){
         if (slice[i]!='*'){
             if (i===0){
-                if (date.getMinutes()!==Math.round(slice[i])){
+                if (date.getMinutes()!=Math.round(slice[i])){
                     return false
                 }
             }else if (i===1){
-                if (date.getHour()!==Math.round(slice[i])){
+                if (date.getHours()!==Math.round(slice[i])){
                     return false
                 } 
             }else if (i===2){
