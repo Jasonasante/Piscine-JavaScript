@@ -25,14 +25,6 @@ function isLeapYear(date){
     }
 }
 
-function isLeapYear(date){
-    let d=new Date(date)
-    if (d.getFullYear()%4===0){
-        return true;
-    }else{
-        return false
-    }
-}
 function isLastDayOfMonth(date){
     let d=new Date(date)
     if (isLeapYear(d)&& d.getMonth()===1 &&  d.getDate()===29){
