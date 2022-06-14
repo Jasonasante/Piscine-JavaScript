@@ -5,7 +5,7 @@ function matchCron(str,date){
     }
 
     for (let i=0;i<slice.length;i++){
-        if (slice[i]!=='*'){
+        if (slice[i]!='*'){
             if (i===0){
                 if (date.getMinutes()!==Math.round(slice[i])){
                     return false
@@ -23,7 +23,7 @@ function matchCron(str,date){
                     return false
                 }               
             }else{
-                if (date.getDay()+1!==Math.round((slice[i]))){
+                if (date.getDay()!==Math.round((slice[i]))){
                     return false
                 }
             }
