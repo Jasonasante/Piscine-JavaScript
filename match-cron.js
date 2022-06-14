@@ -19,13 +19,11 @@ function matchCron(str,date){
                     return false
                 }
             }else if (i===3){
-                
                  if (date.getMonth()+1!==Math.round(slice[i])){
                     return false
                 }               
             }else{
                 if (date.getDay()+1!==Math.round((slice[i]))){
-                    console.log(slice[i])
                     return false
                 }
             }
