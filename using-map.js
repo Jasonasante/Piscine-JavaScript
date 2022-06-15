@@ -12,8 +12,11 @@ function fahrenheitToCelsius(arr){
     return arr.map(str=>Math.floor((parseInt(str)-32)/1.8)+'°C')
 }
 
-function trimTemp(arr){
-    return arr.map(element => element.temperature = element.temperature.replace(/\s/g, ''))
+function trimTemp(arr) {
+    return arr.map(element => {
+        element.temperature = element.temperature.replace(/\s/g, '')
+        return element
+    })
 }
 
 function tempForecasts(arr){
