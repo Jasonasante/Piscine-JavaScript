@@ -1,5 +1,11 @@
-const adder=array=>array.reduce(myFunc)
-function myFunc(total, num) {
-  return total + num;
-}
-console.log(adder([1,2,3]))
+const adder=(array, num=0)=>array.reduce(((total,currentItem)=>total+currentItem),num)
+
+const sumOrMul=(array,num=0)=>array.reduce(((total,currentItem)=>{
+  if (currentItem%2===0){
+      return total*currentItem
+  }else{
+      return total+currentItem
+  }
+  }), num)
+
+const funcExec=(array,num=0)=>array.reduce((total,currentItem)=>currentItem(total),num)
