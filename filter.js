@@ -1,7 +1,7 @@
 function filter(arr = [], fun) {
     let tempArr=[]
     for (let i=0;i<arr.length;i++){
-        if (fun(arr[i])){
+        if (fun(arr[i],i,arr)){
             tempArr.push(arr[i])
         }
     }
@@ -11,7 +11,7 @@ function filter(arr = [], fun) {
 function reject(arr = [], fun) {
     let tempArr=[]
     for (let i=0;i<arr.length;i++){
-        if (!fun(arr[i])){
+        if (!fun(arr[i],i,arr)){
             tempArr.push(arr[i])
         }
     }
