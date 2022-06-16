@@ -12,7 +12,7 @@ function flatMap (arr=[],fun){
     for (let i = 0; i < tempArr.length; i++) {
         tempArr1.push(fun(tempArr[i], i, tempArr1)) 
      }
-    return tempArr1
+     return flat(tempArr1)
 }
 function flat(arr) {
     let result = []; // In this we`ll save the output;
