@@ -24,6 +24,11 @@ function getClassical(){
 function getBonannoPisano(){
     let arrBon=[]
     let bon=document.getElementById('BonannoPisano')
-    arrBon.push(Array.from(document.querySelectorAll('.classical.active')))
+    const active=[...document.querySelectorAll('.classical.active')]
+    for (let i=0;i<active.length;i++){
+        if (active[i].id!='BonannoPisano'){
+            arrBon.push(active[i])
+        }
+    }
     return [bon,arrBon]
 }
