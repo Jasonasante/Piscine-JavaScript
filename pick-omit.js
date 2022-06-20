@@ -18,7 +18,7 @@ function pick(obj,strArr){
 
 function omit(obj,strArr){
     let obj1=obj
-      Object.keys(obj).forEach(key=>{
+      Object.keys(obj1).forEach(key=>{
         if (typeof strArr=='string'){
           if (key==strArr){
           delete obj1[strArr]
