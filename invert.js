@@ -1,5 +1,9 @@
-// function invert(obj){
-//     let obj1=Object.keys(obj).reverse()
-//     return obj1
-// }
-const invert = obj=> Object.keys(obj).reverse()
+//const invertOrder = obj=> Object.keys(obj).reverse() //this reverses the order
+
+function objectFlip(obj) {
+    const ret = {};
+    Object.keys(obj).forEach(key => {
+      ret[obj[key]] = key;
+    });
+    return ret;
+  }
