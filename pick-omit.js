@@ -17,19 +17,18 @@ function pick(obj,strArr){
 }
 
 function omit(obj,strArr){
-    let obj1=obj
-      Object.keys(obj1).forEach(key=>{
+      Object.keys(obj).forEach(key=>{
         if (typeof strArr=='string'){
           if (key==strArr){
-          delete obj1[strArr]
+          delete obj[strArr]
           }
         }else{
             for (let i=0;i<strArr.length;i++){
             if (key==strArr[i]){
-              delete obj1[strArr[i]]
+              delete obj[strArr[i]]
             }
           }
         }
       })
-      return obj1
+      return obj
   }
