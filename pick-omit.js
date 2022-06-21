@@ -17,18 +17,21 @@ function pick(obj,strArr){
 }
 
 function omit(obj,strArr){
-      Object.keys(obj).forEach(key=>{
-        if (typeof strArr=='string'){
-          if (key==strArr){
-          delete obj[strArr]
-          }
-        }else{
-            for (let i=0;i<strArr.length;i++){
-            if (key==strArr[i]){
-              delete obj[strArr[i]]
-            }
+    Object.keys(obj).forEach(key=>{
+      if (obj.hasOwnProperty.call(Object.prototype, '__proto__')&&(strArr!='__proto__'||strArr.includes('__proto__'))){
+          delete obj['__proto__']
+         }
+      if (typeof strArr=='string'){
+        if (key==strArr){
+        delete obj[strArr]
+        }
+      }else{
+          for (let i=0;i<strArr.length;i++){
+          if (key==strArr[i]){
+            delete obj[strArr[i]]
           }
         }
-      })
-      return obj
-  }
+      }
+    })
+    return obj
+}
