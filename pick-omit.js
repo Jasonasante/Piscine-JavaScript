@@ -16,13 +16,12 @@ function pick(obj,strArr){
     return obj1
 }
 
-function omit(obj, strArr) {
-    const obj1 = {}
-    let keysObj = Object.keys(obj)
-    keysObj.forEach(key => {
-        if (key != strArr) {
-            obj1[key] = obj[key]
+function omit(obj, keys) {
+    let res = {}
+    Object.keys(obj).forEach(key => {
+        if (!keys.includes(key)) {
+            res[key] = obj[key]
         }
     })
-    return obj1
+    return res
 }
