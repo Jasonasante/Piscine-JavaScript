@@ -16,22 +16,13 @@ function pick(obj,strArr){
     return obj1
 }
 
-function omit(obj,strArr){
-    Object.keys(obj).forEach(key=>{
-      if (obj.hasOwnProperty.call(Object.prototype, '__proto__')&&(strArr!='__proto__'||strArr.includes('__proto__'))){
-          delete obj['__proto__']
-         }
-      if (typeof strArr=='string'){
-        if (key==strArr){
-        delete obj[strArr]
+function omit(obj, strArr) {
+    const obj1 = {}
+    let keysObj = Object.keys(obj)
+    keysObj.forEach(key => {
+        if (key != strArr) {
+            obj1[key] = obj[key]
         }
-      }else{
-          for (let i=0;i<strArr.length;i++){
-          if (key==strArr[i]){
-            delete obj[strArr[i]]
-          }
-        }
-      }
     })
-    return obj
+    return obj1
 }
