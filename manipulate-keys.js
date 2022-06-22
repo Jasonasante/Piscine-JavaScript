@@ -32,22 +32,11 @@ const reduceKeys=(nutrients,fun, num)=>{
     }
     
     Object.keys(nutrients).forEach((objCheck,i)=>{
-        if(typeof nutrients[objCheck]==='object'){
-        Object.keys(nutrients[objCheck]).forEach((keys,i)=>{
-            if (i===0&&acc===undefined){
-                acc =keys
-            }  else{
-                 acc=fun(acc,keys)
-            }
-          })
-        }else{
             if (i===0&&acc===undefined){
                 acc =objCheck
             }  else{
                  acc=fun(acc,objCheck)
             }
-        }
-       
     })
      return acc
 }
