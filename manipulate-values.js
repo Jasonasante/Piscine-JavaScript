@@ -1,19 +1,12 @@
 const filterValues=(nutrients, fun)=>{
     let filteredNutrients={}
-    Object.keys(nutrients).forEach(objCheck=>{
-        if(typeof nutrients[objCheck]==='object'){
-        filteredNutrients[objCheck]=nutrients[objCheck]
-          Object.keys(filteredNutrients[objCheck]).forEach(keys=>{
-              if (!fun(filteredNutrients[objCheck][keys])){
-                  delete filteredNutrients[objCheck][keys]
-              }
-          })
-        }else{
-            if (fun(nutrients[objCheck])){
-                filteredNutrients[objCheck]=nutrients[objCheck]
-              }
+    for (let [key ,value] of Object.entries(nutrients)){
+        if (fun(value)){
+         filteredNutrients[key]=value
         }
-    })
+    }      
+
+
     return filteredNutrients
 }
 
