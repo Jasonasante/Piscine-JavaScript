@@ -12,7 +12,7 @@ const mapKeys=(nutrients, fun)=>{
     let mappedNutrients={}
     Object.keys(nutrients).forEach(objCheck=>{
         if(typeof nutrients[objCheck]==='object'){
-        mappedNutrients[objCheck]=fun(nutrients[objCheck])
+        mappedNutrients[fun(objCheck)]=nutrients[objCheck]
         }else{
                 mappedNutrients[fun(objCheck)]=nutrients[objCheck]
         }
