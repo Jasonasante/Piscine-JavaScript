@@ -7,7 +7,6 @@ const filterKeys=(nutrients, fun)=>{
     }      
     return filteredNutrients
 }
-console.log(filterKeys(nutrients, (key) => /protein/.test(key)))
 
 const mapKeys=(nutrients, fun)=>{
     let mappedNutrients={}
