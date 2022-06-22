@@ -35,9 +35,9 @@ const reduceValues=(nutrients,fun)=>{
     } 
     let acc
 
-    Object.keys(nutrients).forEach(objCheck,i=>{
+    Object.keys(nutrients).forEach((objCheck,i)=>{
         if(typeof nutrients[objCheck]==='object'){
-        Object.keys(nutrients[objCheck]).forEach(keys,i=>{
+        Object.keys(nutrients[objCheck]).forEach((keys,i)=>{
             if (i===0){
                 acc =nutrients[objCheck][keys]
             }  else{
