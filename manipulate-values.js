@@ -27,25 +27,28 @@ const mapValues=(nutrients, fun)=>{
     return mappedNutrients
 }
 
-const reduceValues=(nutrients,fun)=>{
+const reduceValues=(nutrients,fun, num)=>{
     try{
         if (nutrients.length<=1) throw new Error;
     }catch(e) {
         console.log(e.name)
     } 
     let acc
-
+    if (num!==undefined){
+        acc=num
+    }
+    
     Object.keys(nutrients).forEach((objCheck,i)=>{
         if(typeof nutrients[objCheck]==='object'){
         Object.keys(nutrients[objCheck]).forEach((keys,i)=>{
-            if (i===0){
+            if (i===0&&acc===undefined){
                 acc =nutrients[objCheck][keys]
             }  else{
                  acc=fun(acc,nutrients[objCheck][keys])
             }
           })
         }else{
-            if (i===0){
+            if (i===0&&acc===undefined){
                 acc =nutrients[objCheck]
             }  else{
                  acc=fun(acc,nutrients[objCheck])
