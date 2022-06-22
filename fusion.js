@@ -5,7 +5,7 @@ const fusion=(first,second)=>{
         return first
     }else if (typeof first !== typeof second){
         return second
-    }else if(Array.isArray(first)==Array.isArray(second)){
+    }else if(Array.isArray(first)&&Array.isArray(second)){
         return first.concat(second)
     }else if(typeof first==='string'&&typeof second==='string'){
         return first +' '+second
@@ -23,7 +23,5 @@ const fusion=(first,second)=>{
         })
     
         return res
-    }else{
-
     }
 }
