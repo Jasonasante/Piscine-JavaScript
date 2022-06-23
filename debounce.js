@@ -6,7 +6,10 @@ const debounce = (fn, delay) => {
     }
   }
 
-function opDebounce(func){
-   return _.debounce(func,timeout)
+function opDebounce(func,delay){
+   return _.debounce(func, delay, {
+    'leading': true,
+    'trailing': false
+  })
 }
     
