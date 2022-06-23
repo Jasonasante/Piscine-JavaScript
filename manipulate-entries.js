@@ -1,4 +1,4 @@
-const filterEntries=(obj,func)=>{
+const filterEntries=(obj,fun)=>{
     let filtered={}
     for (let [key,value] of Object.entries(obj)){
        if (fun([key,value])){
