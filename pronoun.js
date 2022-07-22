@@ -2,6 +2,7 @@ const pronoun=str=>{
     let words=str.split(/\b\s+/)
     let res={}
     words.forEach((word,i)=>{
+        word=word.toLowerCase()
         if(confirmPronoun(word)){
             if (!res[word]){
                 res[word]={word:[],count:0}
