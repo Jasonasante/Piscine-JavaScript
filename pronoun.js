@@ -1,5 +1,5 @@
 const pronoun=str=>{
-    let words=str.split(/\b\s+/)
+    let words=str.split(/[\s,]+/)
     let res={}
     words.forEach((word,i)=>{
         word=word.toLowerCase()
