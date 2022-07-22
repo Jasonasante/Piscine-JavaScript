@@ -4,10 +4,10 @@ const pronoun=str=>{
     words.forEach((word,i)=>{
         if(confirmPronoun(word)){
             if (!res[word]){
-                res[word]={words:[],count:0}
+                res[word]={word:[],count:0}
             }
             if (i !== words.length - 1 && !confirmPronoun(words[i + 1])){
-                res[word].words.push(words[i + 1])
+                res[word].word.push(words[i + 1])
             }
             res[word].count++
         }
